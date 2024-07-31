@@ -10,6 +10,11 @@ test.each([
     address: '0x5755d1dcea21caa687339c305d143e6e78f96adf',
     expected: 'clusters/main',
   },
-])(`getCluster('$address') -> $expected`, ({ address, expected }) => {
-  expect(getClusterName(address)).toBe(expected)
+  {
+    address: '0x0000000000000000000000000000000000000000',
+    expected: null,
+  },
+])(`getClusterName('$address') -> $expected`, async ({ address, expected }) => {
+  const result = await getClusterName(address)
+  expect(result).toEqual(expected)
 })

@@ -20,6 +20,7 @@ test.each([
     cluster: `${'z'.repeat(33)}`,
     expected: null,
   },
-])(`getCluster('$cluster') -> $expected`, ({ cluster, expected }) => {
-  expect(getCluster(cluster)).toBe(expected)
+])(`getCluster('$cluster') -> $expected`, async ({ cluster, expected }) => {
+  const result = await getCluster(cluster)
+  expect(result).toEqual(expected)
 })
