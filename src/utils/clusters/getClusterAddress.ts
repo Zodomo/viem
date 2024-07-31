@@ -2,10 +2,10 @@
  * @description Resolves a Cluster name to an address (if any)
  *
  * @example
- * getClustersAddress('clusters/protocol')
+ * getClusterAddress('clusters/protocol')
  * '0x00000000000e1a99dddd5610111884278bdbda1d'
  */
-export async function getClustersAddress(name: string): Promise<string> {
+export async function getClusterAddress(name: string): Promise<string> {
   try {
     const response = await fetch(
       `https://api.clusters.xyz/v0.1/address/${name}`

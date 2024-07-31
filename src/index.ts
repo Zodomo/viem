@@ -1703,6 +1703,6 @@ export type {
   RpcUserOperationReceipt,
   RpcUserOperationRequest,
 } from './account-abstraction/types/rpc.js'
-export { getClustersAddress } from './utils/clusters/getClustersAddress.js'
+export { getClusterAddress } from './utils/clusters/getClusterAddress.js'
 export { getClusterName } from './utils/clusters/getClusterName.js'
 export { getCluster } from './utils/clusters/getCluster.js'
